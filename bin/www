@@ -1,0 +1,18 @@
+#!/usr/local/bin/node
+
+var app			= require('./../app');
+var http		= require('http').Server(app);
+
+var config		= require('nconf');
+	config.file('./config.json');
+
+	config.defaults({
+		'http': {
+			'port': 8080
+		},
+		'path': {
+			'upload': 'upload'
+		}
+	});
+
+http.listen(config.get('http:port'));

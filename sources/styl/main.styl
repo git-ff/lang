@@ -1,0 +1,59 @@
+body
+  font-family sans-serif
+  background #fefefe
+
+.modal_block
+  width 95%
+  max-width 650px
+  margin 100px auto 0
+  position absolute
+  left 0
+  right 0
+  .number
+    text-align right
+    color #ddd
+  .card
+    border 1px solid #ccc
+    background #fff
+    text-align center
+    padding 40px 30px
+    box-sizing border-box
+    h2
+      font-size 24px
+      margin-bottom 60px
+    input
+      width 100%
+      text-align center
+      font-size 18px
+      line-height 1.5em
+
+
+
+
+
+.flip-container
+  perspective 1000
+  width 95%
+  max-width 650px
+
+.flip-container.flip .flipper
+  transform rotateY(180deg)
+
+.flipper
+  transition 0.6s
+  transform-style preserve-3d
+  position relative
+
+.front, 
+.back
+  width 100%
+  backface-visibility hidden
+  position absolute
+  top 0
+  left 0
+
+.front
+  z-index 2
+
+.back
+  transform rotateY(180deg)
