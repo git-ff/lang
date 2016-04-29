@@ -32,5 +32,11 @@ app.get('/', function(request, response) {
 	var section	= "home";
 	response.render('index', { section : section });
 });
+app.get('/new', function(request, response){
+	response.render('new.jade', { title: 'new' });
+});
+app.get('/mycards', function(request, response){
+	response.render('mycards.jade', { title: 'mycards' });
+});
 
 module.exports	= app;
